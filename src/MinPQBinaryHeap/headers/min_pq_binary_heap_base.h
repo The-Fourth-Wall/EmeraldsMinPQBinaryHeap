@@ -1,5 +1,5 @@
-#ifndef __MINPQ_H_
-#define __MINPQ_H_
+#ifndef __MIN_PQ_BINARY_HEAP_BASE_H_
+#define __MIN_PQ_BINARY_HEAP_BASE_H_
 
 #include <stdio.h> /* printf */
 #include <stdlib.h> /* malloc, free */
