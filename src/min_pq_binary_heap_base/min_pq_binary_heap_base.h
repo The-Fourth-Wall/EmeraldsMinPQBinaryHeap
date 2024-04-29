@@ -1,15 +1,15 @@
 #ifndef __MIN_PQ_BINARY_HEAP_BASE_H_
 #define __MIN_PQ_BINARY_HEAP_BASE_H_
 
-#include <stdio.h> /* printf */
+#include "../../libs/Bool/export/Bool.h"
+
+#include <stdio.h>  /* printf */
 #include <stdlib.h> /* malloc, free */
 
-#include "../../../libs/Bool/export/Bool.h"
-
 struct min_pq_binary_heap {
-    void **A;
-    size_t size;
-    size_t max_size;
+  void **A;
+  size_t size;
+  size_t max_size;
 };
 
 /**
@@ -21,7 +21,7 @@ struct min_pq_binary_heap {
 struct min_pq_binary_heap *pq_new(size_t max_size);
 
 /**
- * 
+ *
  * @brief Checks whether the structure is empty or not
  * @param self -> The PQ object
  * @return true -> if empty else false
@@ -79,7 +79,8 @@ void pq_print(struct min_pq_binary_heap *self);
 
 /**
  * @func: pq_reset
- * @brief Resets the priority queue by freeling the structure and reallocating space
+ * @brief Resets the priority queue by freeling the structure and reallocating
+ * space
  * @param self -> The PQ object
  */
 void pq_reset(struct min_pq_binary_heap *self);

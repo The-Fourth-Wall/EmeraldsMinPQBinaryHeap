@@ -1,17 +1,9 @@
-#include "MinPQBinaryHeap.spec.h"
-
-module(T_MinPQBinaryHeap, {
-    describe("#get_value", {
-        it("returns `Hello, World!`", {
-            assert_that_charptr("Hello, World!" equals to "Hello, World!");
-        });
-    });
-});
+#include "min_pq_binary_heap_base/min_pq_binary_heap_base.module.spec.h"
 
 spec_suite({
-    T_MinPQBinaryHeap();
+  T_min_pq_binary_heap_base();
 });
 
-spec({
-    run_spec_suite("all");
-});
+int main(void) {
+  run_spec_suite("all");
+};
