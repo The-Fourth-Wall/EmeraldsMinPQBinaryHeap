@@ -1,6 +1,7 @@
-#include "../export/MinPQBinaryHeap.h" /* IWYU pragma: keep */
+#include "../export/EmeraldsMinPQBinaryHeap.h" /* IWYU pragma: keep */
+
 int main(void) {
-  struct min_pq_binary_heap *self = pq_new(20);
+  EmeraldsMinPQBinaryHeap *self = pq_new(20);
   pq_insert(self, (void *)20);
   pq_insert(self, (void *)15);
   pq_insert(self, (void *)8);
