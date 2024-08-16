@@ -1,12 +1,12 @@
 NAME = test
 
 CC = gcc
-OPT = -O2
+OPT = -Og
 VERSION = -std=c89
 OUTPUT = a.out
 
-FLAGS = -Wall -Wextra -Werror -pedantic -pedantic-errors -Wpedantic
-WARNINGS =
+FLAGS = -g -fsanitize=address
+WARNINGS = -Wall -Wextra -Werror -pedantic -pedantic-errors -Wpedantic
 HEADERS =
 LIBS = ../export/*.*o
 
@@ -23,4 +23,4 @@ default: make_library
 
 clean:
 	cd .. && em clean && cd examples
-	rm -rf $(OUTPUT)
+	$(RM) -r $(OUTPUT) ./*.dSYM

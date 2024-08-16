@@ -82,7 +82,6 @@ static void pq_min_heapify(EmeraldsMinPQBinaryHeap *self, size_t index) {
 }
 
 EmeraldsMinPQBinaryHeap *pq_new(size_t max_size) {
-  size_t i;
   EmeraldsMinPQBinaryHeap *self =
     (EmeraldsMinPQBinaryHeap *)malloc(sizeof(EmeraldsMinPQBinaryHeap));
   self->max_size = max_size;
@@ -132,8 +131,6 @@ void pq_print(EmeraldsMinPQBinaryHeap *self) {
 }
 
 void pq_reset(EmeraldsMinPQBinaryHeap *self) {
-  size_t size = self->size;
-
   pq_free(self);
   self = pq_new(self->size);
 }
